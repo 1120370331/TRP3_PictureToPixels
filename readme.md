@@ -14,21 +14,21 @@ makepixel(path,savepath=path_huge,size=template_huge,title="",lore="LargeSize",t
 makepixel(path,savepath=path_medium,size=template_medium,title="",lore="MediumSize",tolerance=4)
 makepixel(path,savepath=path_small,size=template_small,title="",lore="SmallSize",tolerance=4)
 ```
-### Note:what are theses args?
-- path:Your picture's path
-- savepath:The output directory of processed text.End with ***.txt*** is okay.
-- size:To resize your picture as sepeficed size.
-- titie:The title of your picture,may show on the picture,set it "" to skip it.
-- lore:The lore of your picture,may show under title,set it "" to skip it.
-- tolerance:Merge pixels within tolerance,to reduce string length.
-- accuracy_x/accuracy_y:How many pixels to average,the smaller , the more precise.
-- label:Points used for pixmap,only works in ***completed_text*** mode,defaultly use ***█***
+- ### Note:what are theses args?
+- - path:Your picture's path
+- - savepath:The output directory of processed text.End with ***.txt*** is okay.
+- - size:To resize your picture as sepeficed size.
+- - titie:The title of your picture,may show on the picture,set it "" to skip it.
+- - lore:The lore of your picture,may show under title,set it "" to skip it.
+- - tolerance:Merge pixels within tolerance,to reduce string length.
+- - accuracy_x/accuracy_y:How many pixels to average,the smaller , the more precise.
+- - label:Points used for pixmap,only works in ***completed_text*** mode,defaultly use ***█***
 3. run this .py document,waiting and get your string in the documents you have setted in *savepath*
 4. Now there are two situations:
 * For ***completed_text*** mode, just copy the texts in the output document and paste it to your documents in TRP3 item.
 * For ***short_var*** mode, follow these steps.
-- import the item in *QuickImport.txt* to your TRP3 database.
-- paste your texts in workflow:onUse, where to change the variable ***picstring***
-- use your item then you will see your picture.
-- You can change your item name and use description later if not prefer Chinese.
+- 1. import the item in *QuickImport.txt* to your TRP3 database.
+- 2. paste your texts in workflow:onUse, where to change the variable ***picstring***
+- 3. use your item then you will see your picture.
+- 4. You can change your item name and use description later if not prefer Chinese.
 5. ***Now you can trade your item to others and show your picture to everyone who has TRP3-Extended Plugin!***
