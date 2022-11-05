@@ -56,7 +56,7 @@ def istole(tolerance,history,now):
 
 
 #mode：short_var（需要解析的变量值）completed_text（直接可以复制进文档的字符串）
-def makepixel(picturepath,size=None,savepath=None,title="一张画作",lore="由编辑器制作",accuracy_x=8,accuracy_y=8,tolerance=0,mode="short_var"):
+def makepixel(picturepath,size=None,savepath=None,title="A picture",lore="Made by editor.",accuracy_x=8,accuracy_y=8,tolerance=0,mode="completed_text",label="█"):
 
     if savepath == None:
         place = 0
@@ -131,9 +131,9 @@ def makepixel(picturepath,size=None,savepath=None,title="一张画作",lore="由
                 Code = colorcode((Blue,Red,Green))
 
                 if istole(tolerance,h_Blue,Blue)  == True and istole(tolerance,h_Red,Red) == True and istole(tolerance,h_Green,Green) == True :
-                    tttr = "█"
+                    tttr = label
                 else:
-                    tttr = "{/col}{col:"+Code+"}█"
+                    tttr = "{/col}{col:"+Code+"}"+label
                     h_Blue = Blue
                     h_Red = Red
                     h_Green = Green
@@ -231,22 +231,22 @@ def makepixel(picturepath,size=None,savepath=None,title="一张画作",lore="由
 
     #img.show()
 
-#模板
+#template(not necessary)
 template_huge = 1450
 template_medium = 620
 template_small = 300
 
 
 
-
-
-path = "pic1.png"
-path_huge = "topixeled_huge.txt"
-path_medium = "topixeled_medium.txt"
-path_small = "topixeled_small.txt"
 #tlerance:容差值，多少个RGB范围以内才会合并方块
 #accuracy_x/y:精确值，即每相隔多少个像素取平均值
+#mode:completed_text完整的字符串，直接复制到文档中可以直接看到，short_var压缩的字符串，储存空间小，需要配合物品进行解压。
 
-makepixel(path,savepath=path_huge,size=template_huge,title="薇妮·迅光的自拍照",lore="大型尺寸",tolerance=4,accuracy_y=12,accuracy_x=12)
-makepixel(path,savepath=path_medium,size=template_medium,title="薇妮·迅光的自拍照",lore="中型尺寸",tolerance=4)
-makepixel(path,savepath=path_small,size=template_small,title="薇妮·迅光的自拍照",lore="小型尺寸",tolerance=4)
+# path = "pic1.png"
+# path_huge = "topixeled_huge.txt"
+# path_medium = "topixeled_medium.txt"
+# path_small = "topixeled_small.txt"
+
+# makepixel(path,savepath=path_huge,size=template_huge,title="",lore="LargeSize",tolerance=4,accuracy_y=8,accuracy_x=8)
+# makepixel(path,savepath=path_medium,size=template_medium,title="",lore="MediumSize",tolerance=4)
+# makepixel(path,savepath=path_small,size=template_small,title="",lore="SmallSize",tolerance=4)
