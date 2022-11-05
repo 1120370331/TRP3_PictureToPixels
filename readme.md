@@ -2,7 +2,7 @@
 ## To turn your picture into html texts and save in TRP3 documents.
 ### How To Use?
 1. define your picture path in your folder.
-2. use function makepixel() with arguments.For example:
+2. Open ***main.py***,use function makepixel() with arguments.For example:
 ```
 
 path = "pic1.png"
